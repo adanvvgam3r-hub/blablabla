@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerador de Meta de Likes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .card {
+      background-color: #1e1e1e;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+      text-align: center;
+      max-width: 400px;
+      width: 100%;
+    }
+    input {
+      width: 80%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #333;
+      border-radius: 6px;
+      background-color: #2a2a2a;
+      color: #fff;
+      font-size: 1rem;
+      text-align: center;
+    }
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      background-color: #ff4757;
+      color: white;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    button:hover {
+      background-color: #e84118;
+    }
+    .result {
+      margin-top: 15px;
+      padding: 10px;
+      background-color: #2a2a2a;
+      border-radius: 6px;
+      word-break: break-word;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h2>Meta de Likes 💥</h2>
+    <input type="text" id="likesInput" placeholder="Digite a meta de likes">
+    <br>
+    <button onclick="gerarTexto()">Gerar Texto</button>
+
+    <div id="output" class="result" style="display: none;"></div>
+  </div>
+
+  <script>
+    function gerarTexto() {
+      const ttt = document.getElementById("likesInput").value;
+      if (!ttt) return;
+
+      const texto = `Bora bater a meta de ${ttt} likes, tropinha! 👍💥 E não esquece de apoiar o Davi usando o código DGP na loja! 🛒🔥`;
+      
+      const outputDiv = document.getElementById("output");
+      outputDiv.innerText = texto;
+      outputDiv.style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
